@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://yashlamba.github.io/sitemap.xml
