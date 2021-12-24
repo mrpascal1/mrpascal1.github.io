@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% seo %}
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'> -->
+    {% include fonts.html %}
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS" href="/feed.xml" />
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="navbar">
+            <nav class="container" role="navigation" aria-label="Main navigation">
+                <a class="navbar-title alignable pull-left" href="{{ "/" | absolute_url }}">{{ site.title }}</a>
+                {% if site.show_downloads %}
+                <div class="downloads">
+                    <a class="downloads-item" href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a>
+                    <a class="downloads-item" href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a>
+                    <a class="downloads-item" href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a>
+                </div>
+                {% endif %}
+
+                {% include nav.html %}
+            </nav>
+        </header>
+
+        <main class="content">
+            <div class="container">
+            {{ content }}
+            </div>
+        </main>
+        
+		{% if site.footer %}
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    <a href="{{ site.footer_url }}">
+                        <small>{{ site.footer }}</small>
+                    </a>
+                </p>
+            </div>
+        </footer>
+        {% endif %}
+            
+    </div>
+
+    {% include analytics.html %}
+</body>
+<footer>
+</footer>

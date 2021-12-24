@@ -1,95 +1,93 @@
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FTasin5541%2Fportfolio&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+# The Researcher theme
 
-Please give a star and link to this repo in your website, so that the project can grow.
+[![Build Status](https://travis-ci.org/gebeto/researcher.svg?branch=master)](https://travis-ci.org/gebeto/researcher) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-researcher.svg)](https://badge.fury.io/rb/jekyll-theme-researcher)
 
-<p align="center"> 
-    <a href="https://tasin5541.github.io" target="_blank">
-    <img src="images/theme.gif" align="center"></img>
-    </a>
-</p>
+*Researcher is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://gebeto.github.io/researcher), or even [use it today](#usage).*
 
-# Demo
-To view a live demo, **[click here](https://tasin5541.github.io/)**
+![Thumbnail of researcher](thumbnail.png)
 
-# Toggle Theme
-<p align="center"> 
-    <img src="images/toggle.gif" align="center"></img>
-</p>
+## Usage
 
-# How to use
+To use the Researcher theme:
 
-- Remove `<meta http-equiv="refresh" content="0;url=https://tasin5541.github.io/" />` in the `index.html` file
-- You'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer 
-- Create a repository in github named username.github.io (your github username in place of username)
-- Open up cmd/powershell in admin mode and enter the following line to download this repository
+1. Add the following to your site's `_config.yml`:
 
-  - ```python
-     git clone https://github.com/Tasin5541/portfolio.git
-    ```
-- Then go to `C:\Windows\System32\portfolio` in your File Explorer
-- Delete the `.git` file
-- Open `package.json` and add your repository name ("https://your_github_username.github.io") to the homepage section
-
-  - ```python
-     "homepage": "https://username.github.io"
-    ```
-    
-- Create a file called .env in the root directory of your project, type the following in cmd/powershell
-
-  - ```bash
-    cp env.example .env
+    ```yml
+    theme: jekyll-theme-researcher
     ```
 
-- Inside the .env file, add key `REACT_APP_GITHUB_TOKEN` and assign your github token like this.
+2. Optionally, if you'd like to preview your site on your computer, add the following to your site's `Gemfile`:
 
-  - ```javascript
-     // .env
-      REACT_APP_GITHUB_TOKEN = "YOUR GITHUB TOKEN HERE"
+    ```ruby
+    gem "github-pages", group: :jekyll_plugins
     ```
 
-You can get a github token as described [here](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token). Give all permissions while generating token. Also add your `githubUserName` in the correct field inside `git_data_fetcher.js`.
 
-- You will find `git_data_fetcher.js` file in the main directory of the repository. This file is used to fetch the data (Pull requests, Issues, Organizations, Pinned projects etc.) from your github.
-If you open the file, you will see below component at the top of the file. You need to change only that component.
 
-  - ```python
-    const openSource = {
-      githubUserName: "Your Github Username Here.",
-    };
+## Customizing
+
+### Configuration variables
+
+Researcher will respect the following variables, if set in your site's `_config.yml`:
+
+```yml
+title: [The title of your site]
+description: [A short description of your site's purpose]
+```
+
+Additionally, you may choose to set the following optional variables:
+
+```yml
+logo: [Location of the logo]
+show_downloads: ["true" or "false" to indicate whether to provide a download URL]
+google_analytics: [Your Google Analytics tracking ID]
+```
+
+### Stylesheet
+
+If you'd like to add your own custom styles:
+
+1. Create a file called `/assets/css/style.scss` in your site
+2. Add the following content to the top of the file, exactly as shown:
+    ```scss
+    ---
+    ---
+
+    @import "{{ site.theme }}";
     ```
-- Navigate to `C:\Windows\System32\portfolio\src` and open the `portfolio.js` file to change your information
-- Type the following lines in cmd/powershell one by one and press enter after each line
- 
-  - ```python
-     cd portfolio
-     
-     npm install
-     
-     node git_data_fetcher.js
-     
-     npm run build
-     
-     #To view the website in localhost before deploying
-     npm start
-     #press ctrl+c in cmd to stop the localhost if you executed the last command
-     
-     #Deploy to github
-     cd build
-     
-     git init
-     
-     #Use your github username
-     git remote add origin https://github.com/username/username.github.io.git
-     
-     git add .
-     
-     git commit -m 'deploy'
-     
-     git push -u origin master
-    ```
- - You're all set, now visit "username.github.io" to see your website
- - Note: You'll need to copy the `.git` file inside build folder and save it elsewhere. Everytime you update any information run `npm build` and copy the `.git` back into build folder before continuing with `git add .` and the rest of the commands. Remember to copy the `.git` everytime you run `npm build`
+3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
 
-# References 👏🏻
+### Layouts
 
-- Most of the Design and Implementation Ideas are taken from [Saad Pasta's Portfolio Project](https://github.com/saadpasta/developerFolio) and [ashutosh1919 masterPortfolio Project](https://github.com/ashutosh1919/masterPortfolio).
+If you'd like to change the theme's HTML layout:
+
+1. [Copy the original template](https://github.com/gebeto/researcher/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
+2. Create a file called `/_layouts/default.html` in your site
+3. Paste the default layout content copied in the first step
+4. Customize the layout as you'd like
+
+## Roadmap
+
+See the [open issues](https://github.com/gebeto/researcher/issues) for a list of proposed features (and known issues).
+
+## Project philosophy
+
+The Researcher theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
+
+## Contributing
+
+Interested in contributing to Researcher? We'd love your help. Researcher is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
+
+### Previewing the theme locally
+
+If you'd like to preview the theme locally (for example, in the process of proposing a change):
+
+1. Clone down the theme's repository (`git clone https://github.com/gebeto/researcher`)
+2. `cd` into the theme's directory
+3. Run `script/bootstrap` to install the necessary dependencies
+4. Run `bundle exec jekyll serve` to start the preview server
+5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
+
+### Running tests
+
+The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` one before the test script will work.

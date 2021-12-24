@@ -1,0 +1,13 @@
+title: Researcher
+logo: /assets/img/logo.png
+description: Researcher is a theme for GitHub Pages.
+show_downloads: false
+google_analytics: UA-120902316-1
+remote_theme: gebeto/researcher
+
+footer: "Page design by Ankit Sultana"
+footer_url: "https://github.com/ankitsultana"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-github-metadata

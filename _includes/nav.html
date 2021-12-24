@@ -1,0 +1,14 @@
+<ul class="navbar-list">
+	{% assign pages_list = site.html_pages | sort:"nav_order" %}
+	{% for node in pages_list %}
+		{% if node.category %}
+		<li class="navbar-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
+			{% if page.parent == node.title or page.grand_parent == node.title %}
+				{% assign first_level_url = node.url | absolute_url %}
+			{% endif %}
+			<a href="{{ node.url | absolute_url }}" class="{% if page.url == node.url %}active{% endif %}">{{ node.title }}</a>
+			{% if forloop.last == false %}/{% endif %}
+		</li>
+		{% endif %}
+	{% endfor %}
+</ul>
