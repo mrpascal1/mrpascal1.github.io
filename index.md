@@ -3,7 +3,7 @@ layout: default
 ---
 
 # Welcome
-Hi, I am a software engineer experienced with multiple tech stacks and am quite interested in android apps and backend engineering.<br>
+Hi, I am a software engineer experienced with multiple tech stacks and am quite interested in android apps and backend engineering.<br><br>
 Here, I'll try to write tech blogs about the things which I encounter during software development.
 
 * * *
@@ -14,9 +14,10 @@ Here, I'll try to write tech blogs about the things which I encounter during sof
 > <b>Operating Systems:</b> Linux, Windows, Mac OS.<br>
 > <b>Database:</b> MySQL, MongoDB.<br>
 
-[Share](https://mrpascal1.github.io)
-<!-- 
-### Header 3
+
+
+### Education
+I am current pursuing my masters from Mumbai University. I've had been graduated with a CS degree.
 
 ```js
 // Javascript code with syntax highlighting.
@@ -134,4 +135,4 @@ The final element.
 
 ### Button.
 
-It is a button element -->
+It is a button element

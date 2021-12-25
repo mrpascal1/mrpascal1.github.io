@@ -5,7 +5,7 @@ show_downloads: false
 google_analytics: UA-120902316-1
 remote_theme: gebeto/researcher
 
-footer: "Page design by Ankit Sultana"
+footer: "Made with ❤️ in India"
 footer_url: "https://github.com/ankitsultana"
 
 plugins:
