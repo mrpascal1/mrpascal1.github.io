@@ -1,5 +1,8 @@
 ---
 layout: default
+category: Home
+title: Home
+nav_order: 1
 ---
 
 # Welcome

@@ -4,9 +4,6 @@
 - node: Blogs
   url: /Blogs/
 
-- node: Contact
-  url: /Contact/
-
 - node: Resume
   url: /Resume/
 
