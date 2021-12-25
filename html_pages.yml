@@ -1,6 +1,9 @@
 - node: Home
   url: /
 
+- node: Blogs
+  url: /Blogs/
+
 - node: Contact
   url: /Contact/
 
