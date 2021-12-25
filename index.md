@@ -11,13 +11,13 @@ So, here I'll try to write blogs about the things which I encounter during softw
 
 ## Tech skills
 
-> <b>Programming Languages:</b> Python, Kotlin, Java, C, JavaScript, Node.js, PHP, C#.
-> <b>Tools and Technologies:</b> Android Studio, Visual Studio, IntelliJ IDEA, GitHub, Git.
-> <b>Operating Systems:</b> Linux, Windows, Mac OS.
-> <b>Database:</b> MySQL, MongoDB.
+> <b>Programming Languages:</b> Python, Kotlin, Java, C, JavaScript, Node.js, PHP, C#.<br>
+> <b>Tools and Technologies:</b> Android Studio, Visual Studio, IntelliJ IDEA, GitHub, Git.<br>
+> <b>Operating Systems:</b> Linux, Windows, Mac OS.<br>
+> <b>Database:</b> MySQL, MongoDB.<br>
 
 
-
+<!-- 
 ### Header 3
 
 ```js
@@ -136,4 +136,4 @@ The final element.
 
 ### Button.
 
-It is a button element
+It is a button element -->
