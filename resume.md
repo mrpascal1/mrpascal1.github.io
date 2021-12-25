@@ -5,6 +5,6 @@ title: Resume
 nav_order: 3
 ---
 
-## Resume - ⚠️ Page under construction ⚠️
+## Resume - Coming Soon
 
 [back](./)
