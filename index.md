@@ -4,7 +4,8 @@ layout: default
 
 # Home
 
-Hi, I am a Software engineer.
+I am a software engineer experienced with multiple tech stacks and am quite interested in mobile apps and backend, design, scaling and cloud.
+
 
 ## Header 2
 
