@@ -15,6 +15,6 @@ I can learn new stuff fairly quickly and build amazing things with it!
 Apart from it, I have a passion for writing compilers and building operating systems which I try to do as much as possible whenever I get a chance.
 
 ## Contact
-You can write me at _ansarishahid640@gmail.com_
+You can write me at <u>_ansarishahid640@gmail.com_</u>
 
 [back](./)
