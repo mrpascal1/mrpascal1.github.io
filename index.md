@@ -3,20 +3,18 @@ layout: default
 ---
 
 # Welcome
-
-Hi, I am a software engineer experienced with multiple tech stacks and am quite interested in android apps and backend engineering.
-So, here I'll try to write blogs about the things which I encounter during software development.
+Hi, I am a software engineer experienced with multiple tech stacks and am quite interested in android apps and backend engineering.<br>
+Here, I'll try to write tech blogs about the things which I encounter during software development.
 
 * * *
 
 ## Tech skills
-
 > <b>Programming Languages:</b> Python, Kotlin, Java, C, JavaScript, Node.js, PHP, C#.<br>
 > <b>Tools and Technologies:</b> Android Studio, Visual Studio, IntelliJ IDEA, GitHub, Git.<br>
 > <b>Operating Systems:</b> Linux, Windows, Mac OS.<br>
 > <b>Database:</b> MySQL, MongoDB.<br>
 
-
+[Share](https://mrpascal1.github.io)
 <!-- 
 ### Header 3
 
