@@ -1,3 +1,6 @@
+- node: Home
+  url: /
+
 - node: Contact
   url: /Contact/
 
