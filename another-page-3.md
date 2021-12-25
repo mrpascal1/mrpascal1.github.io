@@ -12,6 +12,4 @@ I personally believe that good programmers are never limited by the tech stacks 
 
 Apart from mobile apps, I have a passion for writing compilers and building operating systems which I try to do as much as possible whenever I get a chance.
 
-_yay_
-
 [back](./)

@@ -2,11 +2,11 @@ title: Shahid Raza
 logo: /assets/img/logo.png
 description: Software Engineer.
 show_downloads: false
-google_analytics: UA-120902316-1
+google_analytics: UA-120902316-2
 remote_theme: gebeto/researcher
 
 footer: "Made with ❤️ in India"
-footer_url: "https://github.com/ankitsultana"
+footer_url: "https://github.com/mrpascal1"
 
 plugins:
   - jekyll-seo-tag
