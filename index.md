@@ -29,6 +29,11 @@ GitHubPages::Dependencies.gems.each do |gem, version|
 end
 ```
 
+```python
+# Ruby code with syntax highlighting
+print("Hello World")
+```
+
 #### Header 4
 
 *   This is an unordered list following a header.
