@@ -9,13 +9,12 @@ Here, I'll try to write tech blogs about the things which I encounter during sof
 * * *
 
 ## Tech skills
-> <b>Programming Languages:</b> Python, Kotlin, Java, C, JavaScript, Node.js, PHP, C#.<br>
-> <b>Tools and Technologies:</b> Android Studio, Visual Studio, IntelliJ IDEA, GitHub, Git.<br>
-> <b>Operating Systems:</b> Linux, Windows, Mac OS.<br>
-> <b>Database:</b> MySQL, MongoDB.<br>
+*   <b>Programming Languages:</b> Python, Kotlin, Java, C, JavaScript, Node.js, PHP, C#.<br>
+*   <b>Tools and Technologies:</b> Android Studio, Visual Studio, IntelliJ IDEA, GitHub, Git.<br>
+*   <b>Operating Systems:</b> Linux, Windows, Mac OS.<br>
+*   <b>Database:</b> MySQL, MongoDB.
 
-
-
+<!-- 
 ### Education
 I am current pursuing my masters from Mumbai University. I've had been graduated with a CS degree.
 
@@ -135,4 +134,4 @@ The final element.
 
 ### Button.
 
-It is a button element
+It is a button element -->
