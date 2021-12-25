@@ -2,16 +2,21 @@
 layout: default
 ---
 
-# Home
+# Welcome
 
-I am a software engineer experienced with multiple tech stacks and am quite interested in mobile apps and backend, design, scaling and cloud.
+Hi, I am a software engineer experienced with multiple tech stacks and am quite interested in android apps and backend engineering.
+So, here I'll try to write blogs about the things which I encounter during software development.
+
+* * *
+
+## Tech skills
+
+> <b>Programming Languages:</b> Python, Kotlin, Java, C, JavaScript, Node.js, PHP, C#.
+> <b>Tools and Technologies:</b> Android Studio, Visual Studio, IntelliJ IDEA, GitHub, Git.
+> <b>Operating Systems:</b> Linux, Windows, Mac OS.
+> <b>Database:</b> MySQL, MongoDB.
 
 
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
 
 ### Header 3
 
