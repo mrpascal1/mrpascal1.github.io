@@ -2,7 +2,7 @@
   url: /
 
 - node: Blogs
-  url: /blog.html
+  url: /Blogs/
 
 - node: Resume
   url: /Resume/
