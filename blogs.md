@@ -10,8 +10,9 @@ nav_order: 2
 <ul>
   {% for post in site.posts %}
     <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
       {{ post.excerpt }}
+      <small>{{ page.date | date: "%-d %B %Y" }}</small>
     </li>
   {% endfor %}
 </ul>
