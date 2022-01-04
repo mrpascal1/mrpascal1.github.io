@@ -5,9 +5,7 @@ title: Blogs
 nav_order: 2
 ---
 
-<!-- ## Blogs - Coming Soon -->
-
-<h1>Latest Posts</h1>
+### Latest
 
 <ul>
   {% for post in site.posts %}
