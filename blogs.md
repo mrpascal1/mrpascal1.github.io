@@ -12,7 +12,7 @@ nav_order: 2
     <li>
       <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
       {{ post.excerpt }}
-    <p>{{ post.date | date: "%-d %B %Y" }}</p>
+      {{ post.date | date: "%-d %B %Y" }}
     </li>
   {% endfor %}
 </ul>
