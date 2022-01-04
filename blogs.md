@@ -5,7 +5,7 @@ title: Blogs
 nav_order: 2
 ---
 
-# Latest
+# Blogs
 
 <ul>
   {% for post in site.posts %}
