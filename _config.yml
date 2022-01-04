@@ -4,6 +4,7 @@ description: Software Engineer.
 show_downloads: false
 google_analytics: UA-120902316-2
 remote_theme: gebeto/researcher
+excerpt_separator: <!--more-->
 
 footer: "Made with ❤️ in India"
 footer_url: "https://github.com/mrpascal1"
