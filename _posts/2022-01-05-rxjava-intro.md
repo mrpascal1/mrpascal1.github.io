@@ -27,7 +27,7 @@ Upon subscription, the <code>Observer</code> can have three types of events push
 *   void onComplete(): This event terminates the event sequence with
     success. Now the Observable completed and won't emit any other events. 
 *   void onError(Throwable t): This event also terminates the event
-    sequence but with an error andwill not emit other events. 
+    sequence but with an error andwill not emit other events. <br>
 
 Synchronous example of RxJava - 
 ```java
@@ -52,7 +52,8 @@ Let's see how we can make the above code asynchronous:
     listen to events on a different thread i.e. other than main thread.
 2.  We will use <code>observeOn()</code> to publish the events on a
     different thread i.e. other than main thread.
-3.  We will also make some delay in our program using <code>Thread.sleep()</code>
+3.  We will also make some delay in our program using <code>Thread.sleep()</code><br>
+
 Let's see the code -
 ```java
 Observable<Integer> observable = Observable.create(emitter -> {
@@ -76,7 +77,7 @@ Thread.sleep(5000);
 ```
 
 ### Operators
-RxJava mostly uses the large API of operators used to manipulate, combine, and transform data, such as map(), filter(), take(), flatMap(), and groupBy(). Most of these operators are synchronous,meaning that they perform their computation synchronously inside the onNext() as the events pass by.
+RxJava mostly uses the large API of operators used to manipulate, combine, and transform data, such as map(), filter(), take(), flatMap(), and groupBy(). Most of these operators are synchronous,meaning that they perform their computation synchronously inside the onNext() as the events pass by.<br>
 
 Let's see what does map() operator do (synchronously)-
 ```java
