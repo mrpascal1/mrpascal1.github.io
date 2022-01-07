@@ -48,11 +48,11 @@ observeable.subscribe(value -> {
 ```
 
 Let's see how we can make the above code asynchronous:
-1.  We will make use of <code>subscribeOn()</code> to subscribe and
+*   We will make use of <code>subscribeOn()</code> to subscribe and
     listen to events on a different thread i.e. other than main thread.
-1.  We will use <code>observeOn()</code> to publish the events on a
+*   We will use <code>observeOn()</code> to publish the events on a
     different thread i.e. other than main thread.
-1.  We will also make some delay in our program using <code>Thread.sleep()</code><br>
+*   We will also make some delay in our program using <code>Thread.sleep()</code><br>
 
 Let's see the code -
 ```java
