@@ -28,7 +28,7 @@ Upon subscription, the <code>Observer</code> can have three types of events push
 *   void onError(Throwable t): This event also terminates the event
     sequence but with an error andwill not emit other events. 
 
-```Java
+```java
 Observable<Integer> observable = Observable.create(emitter -> {
     // Emit 100 numbers
     for (int i = 0; i < 100; i++) {
