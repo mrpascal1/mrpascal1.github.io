@@ -5,8 +5,8 @@ title: Introduction to Observables, Observers and Operators - Reactive programmi
 tags: Java RxJava Android
 ---
 Reactive programming is a general programming term that is focused on reacting to changes, such as data values or events. A callback is an approach to reactive programming done imperatively.
-RxJava provides dozens of operators that allow composing, transforming, scheduling, throttling, error handling, and lifecycle management.
 <!--more-->
+RxJava provides dozens of operators that allow composing, transforming, scheduling, throttling, error handling, and lifecycle management.
 
 Examples are taps by a user on the screen and listening for the results of asynchronous network calls.
 <br>
