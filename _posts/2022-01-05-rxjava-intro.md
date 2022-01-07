@@ -2,9 +2,10 @@
 layout: post
 author: Shahid Raza
 title: Introduction to Observables, Observers and Operators - Reactive programming with RxJava.
-tags: RxJava,Android,Java
+tags: Java RxJava Android
 ---
 Reactive programming is a general programming term that is focused on reacting to changes, such as data values or events. A callback is an approach to reactive programming done imperatively.
+RxJava provides dozens of operators that allow composing, transforming, scheduling, throttling, error handling, and lifecycle management.
 <!--more-->
 
 Examples are taps by a user on the screen and listening for the results of asynchronous network calls.
@@ -28,6 +29,7 @@ Upon subscription, the <code>Observer</code> can have three types of events push
 *   void onError(Throwable t): This event also terminates the event
     sequence but with an error andwill not emit other events. 
 
+Synchronous example of RxJava - 
 ```java
 Observable<Integer> observable = Observable.create(emitter -> {
     // Emit 100 numbers
@@ -44,5 +46,50 @@ observeable.subscribe(value -> {
     System.out.println("Received : " + value);
 });
 ```
+
+Let's see how we can make the above code asynchronous:
+1.  We will make use of <code>subscribeOn()</code> to subscribe and
+    listen to events on a different thread i.e. other than main thread.
+2.  We will use <code>observeOn()</code> to publish the events on a
+    different thread i.e. other than main thread.
+3.  We will also make some delay in our program using <code>Thread.sleep()</code>
+Let's see the code -
+```java
+Observable<Integer> observable = Observable.create(emitter -> {
+    // Emit 100 numbers
+    for (int i = 0; i < 100; i++) {
+        //We will also print current thread 
+        System.out.println(Thread.currentThread().getName() + ", Emitting : " + i);
+        Thread.sleep(10);
+        // Emit a value.
+        emitter.onNext(i);
+    }
+    // When all values or emitted, call complete.
+    emitter.onComplete();
+}).subscribeOn(Schedulers.newThread()).observeOn(Schedulers.newThread());
+
+observeable.subscribe(value -> {
+    System.out.println(Thread.currentThread().getName() + ", Received : " + value);
+});
+
+Thread.sleep(5000);
+```
+
+### Operators
+RxJava mostly uses the large API of operators used to manipulate, combine, and transform data, such as map(), filter(), take(), flatMap(), and groupBy(). Most of these operators are synchronous,meaning that they perform their computation synchronously inside the onNext() as the events pass by.
+
+Let's see what does map() operator do (synchronously)-
+```java
+Observable<Integer> observable = Observable.create(emitter -> {
+    emitter.onNext(1);
+    emitter.onNext(2);
+    emitter.onNext(3);
+    emitter.onCompleted();
+});
+observable.map(value -> "Number " + value)
+    .subscribe(System.out::println);
+```
+
+Conclusion - In this article we've seen basics of Observables, Observers and Operators. In the next one I will try to deep dive into RxJava and will focus more on asychronous codes.
 
 [back](/blogs)
