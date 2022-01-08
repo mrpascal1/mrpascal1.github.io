@@ -27,7 +27,7 @@ Upon subscription, the <code>Observer</code> can have three types of events push
 *   <code>void onComplete()</code>: This event terminates the event sequence with
     success. Now the Observable completed and won't emit any other events. 
 *   <code>void onError(Throwable t)</code>: This event also terminates the event
-    sequence but with an error andwill not emit other events. <br>
+    sequence but with an error and will not emit other events. <br>
 
 Synchronous example of RxJava - 
 ```java
@@ -91,6 +91,6 @@ observable.map(value -> "Number " + value)
     .subscribe(System.out::println);
 ```
 
-Conclusion - In this article we've seen basics of Observables, Observers and Operators. In the next one I will try to deep dive into RxJava and will focus more on asychronous codes.
+Conclusion - In this article we've seen basics of Observables, Observers and Operators. In the next one I will try to deep dive into RxJava and will focus more on asynchronous codes.
 
 [back](/blogs)
