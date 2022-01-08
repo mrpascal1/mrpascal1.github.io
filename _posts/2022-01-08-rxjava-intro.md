@@ -38,7 +38,7 @@ Observable<Integer> observable = Observable.create(emitter -> {
         // Publish or emit a value.
         emitter.onNext(i);
     }
-    // When all values or emitted, call complete.
+    // When all values are emitted, call complete.
     emitter.onComplete();
 });
 
@@ -57,7 +57,6 @@ Let's see how we can make the above code asynchronous:
 Let's see the code -
 ```java
 Observable<Integer> observable = Observable.create(emitter -> {
-    // Emit 100 numbers
     for (int i = 0; i < 100; i++) {
         //We will also print current thread 
         System.out.println(Thread.currentThread().getName() + ", Emitting : " + i);
@@ -65,7 +64,7 @@ Observable<Integer> observable = Observable.create(emitter -> {
         // Emit a value.
         emitter.onNext(i);
     }
-    // When all values or emitted, call complete.
+    // At the end, we call complete.
     emitter.onComplete();
 }).subscribeOn(Schedulers.newThread()).observeOn(Schedulers.newThread());
 
