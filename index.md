@@ -12,7 +12,7 @@ Here, I'll try to write tech blogs about the things which I encounter during sof
 * * *
 
 ## Tech skills
-*   <b>Programming Languages:</b> Python, Kotlin, Java, C, JavaScript, Node.js, PHP, C#.<br>
+*   <b>Programming Languages:</b> Python, Kotlin, Java, C, Node.js, PHP, C#.<br>
 *   <b>Tools and Technologies:</b> Android Studio, Visual Studio, IntelliJ IDEA, Git.<br>
 *   <b>Database:</b> MySQL, MongoDB.
 
