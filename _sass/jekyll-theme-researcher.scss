@@ -47,12 +47,15 @@ hr {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.blogHeading{
-    margin-bottom: 0px;
+.blog{
+    h3{
+        margin-bottom: 0px;
+    }
+    p{
+        margin-top: 6px;
+    }
 }
-.blogDescr{
-    margin-top: 6px;
-}
+
 
 /*
  * Navbar
