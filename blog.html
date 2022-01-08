@@ -7,8 +7,8 @@ title: Blog
 <ul>
   {% for post in site.posts %}
     <li>
-      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-      {{ post.excerpt }}
+      <h3 style="margin-bottom: 0px;"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p style="margin-top: 6px;">{{ post.excerpt }}</p>>
     </li>
   {% endfor %}
 </ul>
