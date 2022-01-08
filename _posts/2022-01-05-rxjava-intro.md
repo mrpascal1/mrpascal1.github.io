@@ -23,10 +23,10 @@ These are some scenarios where you may use reactive programming:
 RxJava has <b>Observable</b> class that represents a stream of data or events. It is not eager but lazy. It is intendent for push(reactive) but can also be used for pull(interactive). It can be used synchronously or asynchronously. It can represent single, many or infinite values or events over time.<br> 
 An <code>Observable</code> can emit stream of data and can be subscribed to by an Observer.<br>
 Upon subscription, the <code>Observer</code> can have three types of events pushed to it:
-*   void onNext(T t): This event carries data values to Observers.
-*   void onComplete(): This event terminates the event sequence with
+*   <code>void onNext(T t)</code>: This event carries data values to Observers.
+*   <code>void onComplete()</code>: This event terminates the event sequence with
     success. Now the Observable completed and won't emit any other events. 
-*   void onError(Throwable t): This event also terminates the event
+*   <code>void onError(Throwable t)</code>: This event also terminates the event
     sequence but with an error andwill not emit other events. <br>
 
 Synchronous example of RxJava - 
