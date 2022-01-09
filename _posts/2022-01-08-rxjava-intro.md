@@ -42,7 +42,7 @@ Observable<Integer> observable = Observable.create(emitter -> {
     emitter.onComplete();
 });
 
-observeable.subscribe(value -> {
+observable.subscribe(value -> {
     System.out.println("Received : " + value);
 });
 ```
@@ -68,7 +68,7 @@ Observable<Integer> observable = Observable.create(emitter -> {
     emitter.onComplete();
 }).subscribeOn(Schedulers.newThread()).observeOn(Schedulers.newThread());
 
-observeable.subscribe(value -> {
+observable.subscribe(value -> {
     System.out.println(Thread.currentThread().getName() + ", Received : " + value);
 });
 
