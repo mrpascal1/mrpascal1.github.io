@@ -17,7 +17,6 @@ Apart from it, I have a passion for writing compilers and building operating sys
 * * *
 
 ## Contact
-You can write me at _<u>ansarishahid640@gmail.com</u>_<br>
-Or connect with me on [LinkedIn](https://www.linkedin.com/in/shahidans/) | [Instagram](https://instagram.com/shahidraza._) 
+Connect with me on [LinkedIn](https://www.linkedin.com/in/shahidans/) | [Instagram](https://instagram.com/shahidraza._) 
 
 [back](./)
