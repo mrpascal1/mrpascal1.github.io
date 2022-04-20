@@ -18,10 +18,3 @@
 	font-weight: 900;
     src: url("sen-extrabold.otf") format("opentype");
 }
-
-@font-face {
-    font-family: Jetbrains-Mono;
-	font-style: normal;
-	font-weight: 900;
-    src: url("JetBrainsMono-Regular.woff2") format("woff2");
-}
