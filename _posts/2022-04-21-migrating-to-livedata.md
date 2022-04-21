@@ -25,18 +25,17 @@ Here are some advantages of using LiveData in your project:
 I've been using ViewModel with interfaces as a listener and for passing data from my ViewModel to the corresponding activity.
 I was defining the interface in ViewModel and implementing it in activity/fragment. So whenever some event happens we simply call the method on the interface. This is simple and straightforward approach but this is an anti-pattern because in MVVM we should not have any reference to the view. 
 
-Let's see how our the interface looks like:
-
+#### Let's see how our the interface looks like:
 ![mgl-interface](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/mgl-interface.png)
 This interface we have declared has 3 methods, they are very much self explanatory.
 
-Let's have a look at the ViewModel
+#### Let's have a look at the ViewModel:
 ![mgl-viewmodel](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/mgl-viewmodel.png)
 In UsersViewModel we are:
 *   Creating a private instance of the repository.
 *   Initializing the interface (UsersListener) with null.
 *   Defining a method <code>getUsers(message: String)</code> which take one string parameter and on execution we first call the <code>onLoading(message)</code> method. Then make an async network call using the repository method <code>getUsers()</code>, if everything goes well we'll call the <code>onSuccess(response)</code> method. But if there is some error, we'll call the 
-<code>onError(error)</code>
+<code>onError(error)</code>.
 
 If you found this blog informative, please share.
 
