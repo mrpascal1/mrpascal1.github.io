@@ -29,7 +29,7 @@ Let's see the interface communication approach below:
 ![mgl-interface](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/mgl-interface.png)
 
 The ViewModel file looking like below:
-![mgl-viewmodel](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/mgl-viewmodel.png)
+![mgl-viewmodel](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/mgl-viewmodel2.png)
 
 
 If you found this blog informative, please share.
