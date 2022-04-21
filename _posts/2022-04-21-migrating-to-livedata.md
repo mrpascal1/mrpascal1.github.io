@@ -26,7 +26,10 @@ I've been using ViewModel with interfaces as a listener and for passing data fro
 I was defining the interface in ViewModel and implementing it in activity/fragment. So whenever some event happens we simply call the method on the interface. This is simple and straightforward approach but this is an anti-pattern because in MVVM we should not have any reference to the view. 
 
 Let's see the interface communication approach below:
-![mgl-interface](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/mgl-interface2.png)
+![mgl-interface](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/mgl-interface.png)
+
+The ViewModel file looking like below:
+![mgl-viewmodel](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/mgl-viewmodel.png)
 
 
 If you found this blog informative, please share.
