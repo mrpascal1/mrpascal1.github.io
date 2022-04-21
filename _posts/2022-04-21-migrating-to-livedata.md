@@ -34,13 +34,18 @@ This interface we have declared has 3 methods, they are very much self explanato
 In UsersViewModel we are:
 *   Creating a private instance of the repository.
 *   Initializing the interface (UsersListener) with null.
-*   Defining a method <code>getUsers(message: String)</code> which take one string parameter and on execution we first call the <code>onLoading(message)</code> method.<br>Then make an async network call using the repository method <code>getUsers()</code>, if everything goes well then we will call the <code>onSuccess(response)</code> method.<br>But if there is some error, we'll call the <code>onError(error)</code>.
+*   Defining a method <code>getUsers(message: String)</code> which take one string parameter and on execution we first call the <code>onLoading(message)</code> method. Then make an async network call using the repository method <code>getUsers()</code>, if everything goes well then we will call the <code>onSuccess(response)</code> method. But if there is some error, we'll call the <code>onError(error)</code>.
 
 #### Let's have a look at the Activity:
 ![mgl-activity](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/mgl-activity.png)
 In UsersActivity class we are implementing the interface, and setting the progress bar in <code>onLoading()</code>, 
 and <code>onSuccess()</code> is used to set data to recyclerview adapter.<br>The <code>onError()</code> will show a toast with a particular error.
 
-If you found this blog informative, please share.
+This violates the MVVM pattern and leads to the problem because the UsersViewModel has the reference to the UsersActivity.
+
+#### Now, let's add LiveData to the UsersViewModel and see what happens. 
+![mgl-viewmodel2](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/mgl-viewmodel2.png)
+
+Here, we'll remove all the interface related stuff and add MutableLiveData  which is a type of List<Users> and is immutable. Also, we will expose one LiveData with the same type which contains the all the data form MutableLiveData which is used to observe in our activity. Then we use the setValue(T?) to set the value to our MutableLiveData.
 
 [back](/blogs)
