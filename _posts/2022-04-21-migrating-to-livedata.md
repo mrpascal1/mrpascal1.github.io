@@ -46,13 +46,13 @@ This violates the MVVM pattern and leads to the problem because the UsersViewMod
 #### Now, let's add LiveData to the UsersViewModel and see what happens. 
 ![mgl-viewmodel2](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/mgl-viewmodel2.png)
 
-Here, we'll remove all the interface related stuff and add MutableLiveData  which is a type of <code>List<Users></code> and is immutable. Also, we will expose one LiveData with the same type which contains the all the data form MutableLiveData which is used to observe in our activity. Then we use the <code>setValue(T)</code> to set the value to our MutableLiveData.
+Here, we'll remove all the interface related stuff and add MutableLiveData  which is a type of <code><pre>List<Users></pre></code> and is immutable. Also, we will expose one LiveData with the same type which contains the all the data form MutableLiveData which is used to observe in our activity. Then we use the <code>setValue(T)</code> to set the value to our MutableLiveData.
 
 #### And we now modify the Activity like this:
 ![mgl-viewmodel2](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/mgl-activity2.png)
-Here, we'll remove the implementaion and create a function <code>getUsers()</code> which contains:
+Here, we'll remove the interface implementaion and create a function <code>getUsers()</code> which contains:
 *   A Progress dialog which we show when the method gets called.
-*   Then we are setting an observer which observe to <code>users</code> LiveData, this observer takes one argument (owner) which is a basically a to identify current lifeCycle state. It'll give us the users list which we sent from our viewModel's <code>setValue(T)</code> method.
+*   Then we are setting an observer which observe to <code>users</code> LiveData, this observer takes one argument (owner) which is basically to identify current lifecycle state. It'll give us the users list which we sent from our viewModel by using <code>setValue(T)</code> method of the MutableLiveData.
 *   Here, one thing you should notice that we are observing to <code>users</code> which is a public LiveData instance in our ViewModel, we are using it because while using LiveData we ensure that anything outside the UsersViewModel should not be able to manipulate anything in our LiveData. Hence, all the editing and processing should be done by the UsersViewModel class by MutableLiveData. And same would apply to the error observer.
 *   Lastly, we are calling our <code>getUsers()</code> method from viewModel which makes a network call to make everything work.
 
