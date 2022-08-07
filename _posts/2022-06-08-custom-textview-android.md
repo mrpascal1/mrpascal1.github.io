@@ -16,7 +16,7 @@ There are plenty of open source expandable textview libraries available. But why
 
 ### How we are gonna build?
 Android provides flexibility for creating your own custom component by extending any existing view or viewgroup.<br>
-So, we will build our own custom android component which will extend the TextView.<br>
+So, we will build our own custom android component which will extend the TextView.
 TextView provides lots of features but unfortunately it didn't spoon feed everything to the developer.
 
 Enough theory, let's start by creating a new class in Kotlin - ExpandableTv.kt
@@ -28,16 +28,30 @@ You can see there are three constructors we have implemented from the parent cla
 
 We will first declare some variables for storing and managing our collapsed and expanded text.
 
-<code>init(attrs)</code> is a private method which does the following operations -
+<code>init(attrs)</code> does the following operations -
 *   First, we will create a TypedArray instance for getting the attributes value defined by the user in the xml.
 *   From typed array we will get the max length defined by the programmer, if it's not declared in the xml then we will define a default value (225).
 *   Then, we will assign the text which is set by the user to <code>fullText</code> for further manipulation.
 *   Note: you need to call the <code>recycle()</code> method to relase the TypedArray to be re-used by the later caller.
 *   Then lastly, we will call the <code>collapse()</code> method to collapse the text.
 
+Before looking at <code>collapse()</code> let's see what is inside our attrs.xml file -
+![ExpandableTv attrs](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/xml-attrs.png)
+Our use case is pretty simple so we only require one attribute which is of integer type.
+
+Next -
 ![ExpandableTv collapse](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/method2.png)
 
-<code>collapse()</code> is a private method which does the following operations -
-*   When collapse is called it means that the text is changed and our component needs to keep track of the state (collapsed or expanded).
+<code>collapse()</code> does the following operations -
+*   When collapse is called it means that the text is changed and our component needs to keep track of the state (collapsed or expanded) so we just update isCollapsed boolean.
 *   Then, we will check if the text which is currently passed to the textview is smaller than equal to the max length (default is 225) entered to which we have to ellipsize further text, if the condition satisfied then we don't have to do anything more and just set the full string to the textview else get a substring of fullText till specified max length and put "...show more" at the end.
-*   Note: We are directly setting the if expression returned value to the textview.
+*   Note: We are directly setting the value returned from the if expression to the textview.
+
+Almost same logic for <code>expand()</code> -
+![ExpandableTv expand](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/method3.png)
+<code>collapse()</code> does the following operations -
+*   We will set the isCollapsed to true to keep track of the current state.
+*   Rest of the code is similar to collapse, the only difference is that we need to change the string attribute.
+
+After wiring everything together, your code should look like this -
+![ExpandableTv expand](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/complete-view1.png)
