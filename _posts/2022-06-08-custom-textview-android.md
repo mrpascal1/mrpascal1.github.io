@@ -20,6 +20,7 @@ So, we will build our own custom android component which will extend the TextVie
 TextView provides lots of features but unfortunately, it didn't spoon-feed everything to the developer.
 
 Enough theory, let's start by creating a new class in Kotlin - ExpandableTv.kt
+
 ![ExpandableTv class](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/class1.png)
 
 You can see there are three constructors we have implemented from the parent class. Remember if you're implementing your own views, only the first 2 constructors should be needed and can be called by the framework. This code is very much self-explanatory. Now let's have a look inside the <code>init(attrs)</code> method.
