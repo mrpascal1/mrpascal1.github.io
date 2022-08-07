@@ -4,12 +4,12 @@ author: Shahid Raza
 title: Let's build a custom TextView.
 tags: Android Views TextView Custom Kotlin
 ---
-TextView is a basic android view used for displaying text to the user. Today we are gonna build a TextView with steriods :)
+TextView is a basic android view used by developers for displaying text in their apps. Today we're gonna give TextView some steroids :)
 
 <!--more-->
 
 ### What we're gonna build?
-Imagine a situation where you want to show a particular length of the text to the user followed by "...show more" only if the length of the string is 
+Imagine a situation where you want to show a particular length of the text to the user followed by <b>"...show more"</b> only if the length of the string is 
 greater than the maximum length of string you want to show to the user. We call it an expandable textview.<br>
 Android framework doesn't provide any solution to this problem.<br>
 There is plenty of open source libraries available for this. But why use a library when you can build it by yourself?<br>
