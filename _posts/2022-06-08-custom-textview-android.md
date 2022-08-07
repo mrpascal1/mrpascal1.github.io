@@ -6,7 +6,7 @@ tags: Android Views TextView Custom Kotlin
 ---
 TextView is a basic android view used for displaying text to the user. Today we are gonna build a TextView with steriods :)
 
-<!--More-->
+<!--more-->
 
 ### What we're gonna build?
 Imagine a situation where you want to show a particular length of text to the user followed by "...show more" only if the length of the string is 
