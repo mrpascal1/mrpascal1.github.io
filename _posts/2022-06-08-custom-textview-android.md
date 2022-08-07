@@ -11,7 +11,7 @@ TextView is a basic android view used by developers for displaying text in their
 ### What we're gonna build?
 Imagine a situation where you want to show a particular length of the text to the user followed by <b>"...show more"</b> only if the length of the string is 
 greater than the maximum length of string you want to show to the user. We call it an expandable textview.<br>
-Android framework doesn't provide any solution to this problem.<br>
+Android framework doesn't provide any default way to do this.<br>
 There is plenty of open source libraries available for this. But why use a library when you can build it by yourself?<br>
 
 ### How we're gonna build?
