@@ -33,7 +33,7 @@ We will first declare some variables for storing and managing our collapsed and 
 *   From typed array we will get the max length defined by the programmer, if it's not declared in the xml then we will define a default value (225).
 *   Then, we will assign the text which is set by the user to <code>fullText</code> for further manipulation.
 *   Note: you need to call the <code>recycle()</code> method to relase the TypedArray to be re-used by the later caller.
-*   Then lastly, we will call the <code>collapse()</code> method to collapse the text.
+*   At last, we will call the <code>collapse()</code> method to collapse the text.
 
 Before looking at <code>collapse()</code> let's see what is inside our attrs.xml file -
 ![ExpandableTv attrs](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/xml-attrs.png)
@@ -49,9 +49,25 @@ Next -
 
 Almost same logic for <code>expand()</code> -
 ![ExpandableTv expand](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/method3.png)
-<code>collapse()</code> does the following operations -
+<code>expand()</code> does the following operations -
 *   We will set the isCollapsed to true to keep track of the current state.
-*   Rest of the code is similar to collapse, the only difference is that we need to change the string attribute.
+*   Rest of the code is similar to collapse, the only difference is that we need to change the string attribute and no more substrings :)
 
-After wiring everything together, your code should look like this -
-![ExpandableTv expand](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/complete-view1.png)
+This two methods are done, so now we have to make them work together, let's see how we will do it.
+We should have one public method so we can manipulate both of these method in our activity or fragment
+For that we'll create <code>setExpandCollapse()</code> -
+![ExpandableTv expand](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/method4.png)
+<code>setExpandCollapse()</code> is very clean method which just call one of the above method according to the current state (isCollapsed).
+
+After wiring everything together, your code should look something like this -
+![ExpandableTv component](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/complete-view1.png)
+
+Note: We can further optimize this code but just for the sake of this example I am keep it simple. 
+
+So with that, Everything is done on the component part, now it's time to use our custom component inside the project.
+Create a new activity or use an existing one and inside the layout file declare your component like this -
+
+![ExpandableTv activity](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/xml1.png)
+It is a simple declaration like the other components and has one extra attribute which is not present in the base TextView. <code>app:maxLength</code> accept an integer which will decide at what point our string is going to show ellipsis.
+
+![ExpandableTv activity](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/method-call.png)
