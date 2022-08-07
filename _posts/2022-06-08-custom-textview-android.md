@@ -24,10 +24,20 @@ Enough theory, let's start by creating a new class in Kotlin - ExpandableTv.kt
 
 You can see there are three constructors we have implemented from the parent class. Remember if you're implementing your own views, only the first 2 constructors should be needed and can be called by the framework. This code is very much self explanatory. Now let's have a look inside the <code>init(attrs)</code> method.
 
-![ExpandableTv method1](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/method-vars1.png)
+![ExpandableTv method-vars1](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/method-vars1.png)
 
 We will first declare some variables for storing and managing our collapsed and expanded text.
 
 <code>init(attrs)</code> is a private method which does the following operations -
-*   First we will create a TypedArray instance for getting the attributes value defined by the user in the xml.
-*   From typed array we will get the max length defined by the programmer, if it's not declared in the xml then we will pass the hardcoded value (225).
+*   First, we will create a TypedArray instance for getting the attributes value defined by the user in the xml.
+*   From typed array we will get the max length defined by the programmer, if it's not declared in the xml then we will define a default value (225).
+*   Then, we will assign the text which is set by the user to <code>fullText</code> for further manipulation.
+*   Note: you need to call the <code>recycle()</code> method to relase the TypedArray to be re-used by the later caller.
+*   Then lastly, we will call the <code>collapse()</code> method to collapse the text.
+
+![ExpandableTv collapse](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/method2.png)
+
+<code>collapse()</code> is a private method which does the following operations -
+*   When collapse is called it means that the text is changed and our component needs to keep track of the state (collapsed or expanded).
+*   Then, we will check if the text which is currently passed to the textview is smaller than equal to the max length (default is 225) entered to which we have to ellipsize further text, if the condition satisfied then we don't have to do anything more and just set the full string to the textview else get a substring of fullText till specified max length and put "...show more" at the end.
+*   Note: We are directly setting the if expression returned value to the textview.
