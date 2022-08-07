@@ -71,3 +71,6 @@ Create a new activity or use an existing one and inside the layout file declare 
 It is a simple declaration like the other components and has one extra attribute which is not present in the base TextView. <code>app:maxLength</code> accept an integer which will decide at what point our string is going to show ellipsis.
 
 ![ExpandableTv activity](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/082022/method-call.png)
+Finally, we'll call the <code>setExpandCollapse()</code> on click of the textview.
+
+This was a straight forward example of creating a custom component using an existing views. Although you can build some components from scratch where you have to implement <code>onLayout(), onMeasure(), onDraw()</code>, but for our use case it's not required so maybe we will learn about it next time.  
