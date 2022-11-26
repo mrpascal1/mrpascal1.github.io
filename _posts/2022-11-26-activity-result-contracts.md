@@ -80,13 +80,13 @@ Otherwise, we launch the <code>ActivityResultLauncher</code> instance that we cr
 The input type of the contract will be the argument for the launch method. 
 In this case it is a string representing the required permission.
 
-Tip - <code>ActivityResultContracts.RequestMultiplePermissions</code> contract can be used for requesting multiple permission.
+Tip - ActivityResultContracts.RequestMultiplePermissions contract can be used for requesting multiple permission.
 
 ### What are the benefits of this approach?
 
 This approach makes the code much easier to understand. Therefore it is easier to maintain because someone viewing it for the first time requires less cognitive load to understand the logic.
 
-The previous pattern of <code>startActivityForResult() / onActivityResult()</code> required un understanding of how this mechanism works. 
+The previous pattern of startActivityForResult() / onActivityResult() required un understanding of how this mechanism works. 
 However, looking at <code>requestPermissions.launch(...)</code> should lead directly to the lambda which will be invoked on completion.
 
 Moreover, this does not require us to even know that control is passing elsewhere while this is running. 
