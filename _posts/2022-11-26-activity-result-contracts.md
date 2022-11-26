@@ -80,7 +80,7 @@ Otherwise, we launch the <code>ActivityResultLauncher</code> instance that we cr
 The input type of the contract will be the argument for the launch method. 
 In this case it is a string representing the required permission.
 
-Tip - ActivityResultContracts.RequestMultiplePermissions contract can be used for requesting multiple permission.
+Note - ARC.RequestMultiplePermissions contract can be used for requesting multiple permission.
 
 ### What are the benefits of this approach?
 
