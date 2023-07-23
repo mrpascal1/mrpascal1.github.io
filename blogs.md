@@ -10,7 +10,7 @@ nav_order: 2
 <ul>
   {% for post in site.posts %}
     <li class="blog">
-      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <h3><u><a href="{{ post.url }}">{{ post.title }}</a></u></h3>
       {{ post.excerpt }}
     </li>
   {% endfor %}

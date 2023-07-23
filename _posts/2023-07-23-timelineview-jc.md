@@ -170,9 +170,7 @@ fun InitTimeLineView() {
     })
 }
 ```
-#### This will be rendered as
-
-After running the above code it will be displayed -
+#### After wiring up the above code together and running it will be displayed as -
 
 ![TimeLineView-Android](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/072023/timelineview-rendered.png)
 
