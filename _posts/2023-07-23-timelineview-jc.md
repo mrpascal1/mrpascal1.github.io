@@ -10,7 +10,7 @@ Jetpack Compose is a declarative UI toolkit for building Android applications in
 
 It is designed to simplify and accelerate the process of creating user interfaces for Android apps by utilizing a modern, reactive, and composable approach.
 
-Some key features of Jetpack compose are : <b>Declarative UI, Composable Functions, State Management, Material Design Integration, Theming, Animations, Layouts, Testing</b>.
+Some key features of Jetpack Compose are Declarative UI, Composable Functions, State Management, Material Design Integration, Theming, Animations, Layouts, and Easy UI Testing.
 
 Jetpack Compose is backward-compatible and can be used with existing Android codebases, so you can start adopting it gradually in your projects. It is also designed to work seamlessly with Kotlin, the preferred language for Android app development.
 
