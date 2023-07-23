@@ -16,7 +16,7 @@ Here, I'll try to write tech blogs about the things which I encounter during sof
 *   <b>Tools and Technologies:</b> Android Studio, Visual Studio, IntelliJ IDEA, Git.<br>
 *   <b>Database:</b> MySQL
 
-
+<br>
 ### Recent Blog
 <div class="blog"><h3><u style="color: #FF0F00"><a href="https://www.shahidraza.me/2023/07/23/timelineview-jc.html">Writing a simple TimeLineView in less then 100 lines in jetpack compose.</a></u></h3>Jetpack Compose is a declarative UI toolkit for building Android applications introduced by Google as part of the Android Jetpack suite.</div>
 
