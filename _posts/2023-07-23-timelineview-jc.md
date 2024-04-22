@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Shahid Raza
-title: Writing a simple TimeLineView in less then 100 lines in jetpack compose.
+title: Writing a simple TimeLineView in less than 100 lines in jetpack compose.
 tags: Kotlin Android Activities Intents Jetpack Compose
 ---
 Jetpack Compose is a declarative UI toolkit for building Android applications introduced by Google as part of the Android Jetpack suite.
@@ -18,9 +18,9 @@ As Jetpack Compose is part of the larger Android Jetpack suite, it can be integr
 
 ### What is a Time Line?
 A timeline is a graphical representation of a sequence of events arranged in chronological order. It is used to visualize the chronological progression of historical or future events, showing when each event occurred or is expected to occur.
-You might have seen this when you order something on amazon or flipkart or from any ecommerce website.
+You might have seen this when you order something on Amazon or Flipkart or from any e-commerce website.
 
-### Why use Jetpack compose and not the legacy UI (xml design)?
+### Why use Jetpack compose and not the legacy UI (XML design)?
 We can also do it using the XML design but the problem is it will require us to write more code.
 Using jetpack compose we can do it in a lot more easier way.
 
