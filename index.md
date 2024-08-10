@@ -4,9 +4,8 @@ layout: default
 
 ## About Me
 
-<img class="profile-picture" src="sherlock.jpg">
+<!-- <img class="profile-picture" src="sherlock.jpg"> -->
 
-# Welcome
 Hi, I am a software engineer experienced with multiple tech stacks and am quite interested in android apps and backend engineering.<br><br>
 Here, I'll try to write tech blogs about the things which I encounter during software development.
 
