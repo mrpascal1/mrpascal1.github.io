@@ -2,8 +2,6 @@
 layout: default
 ---
 
-## About Me
-
 <!-- <img class="profile-picture" src="sherlock.jpg"> -->
 
 Hi, I am a software engineer experienced with multiple tech stacks and am quite interested in android apps and backend engineering.<br><br>
