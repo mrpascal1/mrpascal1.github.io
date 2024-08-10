@@ -1,14 +1,14 @@
 title: Researcher
-url: "https://ankitsultana.com"
+url: "https://www.shahidraza.me"
 remote_theme: ankitsultana/researcher@gem
 markdown: kramdown
-#ins_logo: "./bits-logo.png"
+google_analytics: "G-TZ67FKMBXR"
 
 tracking_id: #
 
 footer: yes
-footer_url: "https://github.com/ankitsultana"
-footer_text: "Page design by Ankit Sultana"
+footer_url: "https://github.com/mrpascal1"
+footer_text: "Made with 💻 in India"
 
 sass:
     style: compressed
