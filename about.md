@@ -3,19 +3,16 @@ layout: default
 is_contact: false
 ---
 
-<!-- <img class="profile-picture" src="sherlock.jpg"> -->
+## About me
 
-Hi, I am a software engineer experienced with multiple tech stacks and am quite interested in android apps and backend engineering.<br><br>
-Here, I'll try to write tech blogs about the things which I encounter during software development.
+I am a software engineer experienced with multiple tech stacks and am quite interested in android apps and backend engineering.<br>
+<br>
+I personally believe that good programmers are never limited by the tech stacks they have in memory but how well they can understand, learn and develop new things! I always find myself in situations where I know the most complicated stuff but end up Googling the simplest things and that is how development works.<br>
+I can learn new stuff fairly quickly and build amazing things with it!
 
-* * *
-
-## Tech skills
-*   <b>Programming Languages:</b> Kotlin, Java, Python, Node.js, C<br>
-*   <b>Tools and Technologies:</b> Android Studio, Visual Studio, IntelliJ IDEA, Git.<br>
-*   <b>Database:</b> MySQL
+Apart from it, I have a passion for writing compilers and building operating systems which I try to do as much as possible whenever I get a chance.
 
 * * *
 
-### Recent Blog
-<div class="blog"><h3><u style="color: #FF0F00"><a href="https://www.shahidraza.me/2023/07/23/timelineview-jc.html">Writing a simple TimeLineView in less than 100 lines in jetpack compose.</a></u></h3>Jetpack Compose is a declarative UI toolkit for building Android applications introduced by Google as part of the Android Jetpack suite.</div>
+## Contact
+Connect with me on [LinkedIn](https://www.linkedin.com/in/shahidans/) | [Instagram](https://instagram.com/shahidraza._) 
