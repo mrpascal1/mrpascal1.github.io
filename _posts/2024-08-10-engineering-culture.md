@@ -5,8 +5,6 @@ title: Indian Tech Culture - The Services, Products, and Engineering.
 tags: Engineering Tech Culture
 ---
 
-**Indian Tech Culture: The Services, Products, and Engineering**
-
 India’s tech industry is a dynamic and multifaceted landscape, characterized by its robust IT services sector, a growing focus on product development, and a diverse engineering culture. While the services sector has been a cornerstone of the industry, it also highlights several significant issues that impact India’s ability to innovate and compete on the global stage. This blog will delve into the current state of Indian tech culture, with a particular focus on the challenges and criticisms associated with the services sector.
 
 ### The Dominance of IT Services: Strengths and Weaknesses
