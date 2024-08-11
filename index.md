@@ -17,4 +17,4 @@ Here, I'll try to write tech blogs about the things which I encounter during sof
 * * *
 
 ### Recent Blog
-<div class="blog"><h3><u style="color: #FF0F00"><a href="https://www.shahidraza.me/2023/07/23/timelineview-jc.html">Writing a simple TimeLineView in less than 100 lines in jetpack compose.</a></u></h3>Jetpack Compose is a declarative UI toolkit for building Android applications introduced by Google as part of the Android Jetpack suite.</div>
+<div class="blog"><h3><u style="color: #FF0F00"><a href="https://www.shahidraza.me/2024/08/10/engineering-culture.html">Indian Tech Culture - The Services, Products, and Engineering.</a></u></h3>JIndia’s tech world is a complex tapestry, woven with the threads of IT services, emerging product development, and the rich fabric of engineering.</div>

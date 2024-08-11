@@ -175,3 +175,6 @@ fun InitTimeLineView() {
 ![TimeLineView-Android](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/072023/timelineview-rendered.png)
 
 
+[back](/blogs)
+
+

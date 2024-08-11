@@ -61,3 +61,6 @@ Ultimately, the key to progress is to elevate engineering talent. They need the 
 
 ### Conclusion
 India’s tech industry is a blend of success and potential. The IT services sector has built a strong foundation, but it also presents challenges that limit innovation. The shift towards product development and a focus on engineering culture offer a glimpse of a more dynamic future. By embracing change and fostering a culture of creativity, India can transform its tech landscape and make a significant impact globally.
+
+
+[back](/blogs)

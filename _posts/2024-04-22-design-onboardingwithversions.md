@@ -249,3 +249,5 @@ The `ShowHorizontalPager` function is a `Composable` that displays a horizontal 
 
 - Fetches the onboarding data using `fetchOnboarding` from `OnboardingViewModel` when the composable is launched.
 
+
+[back](/blogs)
