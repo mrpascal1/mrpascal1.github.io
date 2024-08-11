@@ -7,6 +7,7 @@ tags: Engineering Tech Culture
 
 India’s tech world is a complex tapestry, woven with the threads of IT services, emerging product development, and the rich fabric of engineering. Each element plays a vital role, but also highlights some significant issues. 
 <!--more--> 
+
 Let’s explore how these aspects intersect and the challenges that they reveal, all through a philosophical lens.
 
 ### The Services Sector: A Double-Edged Sword
