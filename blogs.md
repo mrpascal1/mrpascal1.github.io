@@ -3,7 +3,7 @@ layout: default
 category: Blogs
 ---
 
-# Blogs
+## Blogs
 
 <ul>
   {% for post in site.posts %}
