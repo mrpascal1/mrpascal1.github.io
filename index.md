@@ -17,4 +17,4 @@ Here, I'll try to write tech blogs about the things which I encounter during sof
 * * *
 
 ### Recent Blog
-<div class="blog"><h3><u style="color: #FF0F00"><a href="https://www.shahidraza.me/2024/08/10/engineering-culture.html">Indian Tech Culture - The Services, Products, and Engineering.</a></u></h3>India’s tech world is a complex tapestry, woven with the threads of IT services, emerging product development, and the rich fabric of engineering.</div>
+<div class="blog"><h3><u style="color: #FF0F00"><a href="https://www.shahidraza.me/2025/08/09/method_hooking_root_android.html">Method Hooking Detection & Runtime Code Integrity Checks — Hardcore Android Guide</a></u></h3>Deep dive, practical code, trade-offs, and a real-world implementation plan you can drop into a production Android app.</div>
