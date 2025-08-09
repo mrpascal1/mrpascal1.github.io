@@ -15,7 +15,7 @@ Deep dive, practical code, trade-offs, and a real-world implementation plan you 
 ## Table of Contents
 
 1. [Goals & Threat Model](#goals--threat-model)
-2. [How Hooking Works — technical primer](#how-hooking-works---technical-primer)
+2. [How Hooking Works — technical primer](#how-hooking-works-technical-primer)
 3. [Categories of Detection](#categories-of-detection)
 4. [Practical Kotlin implementations — code you can drop in today](#practical-kotlin-implementations)
 5. [Advanced native / ART-level checks (concept + example)](#advanced-native--art-level-checks)
