@@ -1,3 +1,10 @@
+---
+layout: post
+author: Shahid Raza
+title: Method Hooking Detection & Runtime Code Integrity Checks — Hardcore Android Guide
+tags: Engineering Android Security
+---
+
 # Method Hooking Detection & Runtime Code Integrity Checks — Hardcore Android Guide
 
 > Deep dive, practical code, trade-offs, and a real-world implementation plan you can drop into a production Android app.
@@ -18,7 +25,7 @@
 8. [Hardening, deployment, and telemetry](#hardening-deployment-and-telemetry)
 9. [Testing, false positives & UX](#testing-false-positives--ux)
 10. [Limitations & how attackers will try to bypass you](#limitations--how-attackers-will-try-to-bypass-you)
-11. [Action plan and checklist](#action-plan-and-checklist)
+11. [Action plan & checklist](#action-plan-&-checklist)
 
 ---
 
@@ -82,9 +89,6 @@ Below are battle-tested snippets (Kotlin) you can use right away. Keep each snip
 ### Helper: hex / sha utilities
 
 ```kotlin
-import java.io.File
-import java.io.InputStream
-import java.security.MessageDigest
 
 fun ByteArray.toHex(): String = joinToString("") { "%02x".format(it) }
 
@@ -107,8 +111,6 @@ fun File.sha256(): String = this.inputStream().use { it.sha256() }
 This is standard first-line detection.
 
 ```kotlin
-import java.io.BufferedReader
-import java.io.InputStreamReader
 
 fun isDeviceRooted(): Boolean {
     // Common su locations
@@ -186,13 +188,6 @@ You can extend this to search `/proc/net/tcp` for unusual listening ports (frida
 Check whether the app's signing certificate matches the one you expect. Do **not** rely on this alone — an attacker could re-sign and install modified APK — but it’s an important check.
 
 ```kotlin
-import android.content.Context
-import android.content.pm.PackageInfo
-import android.content.pm.PackageManager
-import android.os.Build
-import java.io.ByteArrayInputStream
-import java.security.MessageDigest
-import java.security.cert.CertificateFactory
 
 fun getSigningCertSha256(context: Context): String? {
     val pm = context.packageManager
@@ -234,7 +229,6 @@ At build time compute the expected SHA-256 of your signing cert, store it server
 If an attacker modifies the APK or replaces classes.dex, its hash will change. Compute a SHA-256 of `classes.dex` inside the APK and compare against a known-good value produced at build time.
 
 ```kotlin
-import java.util.zip.ZipFile
 
 fun classesDexSha256(context: Context): String? {
     val apk = File(context.applicationInfo.sourceDir)
@@ -254,8 +248,6 @@ fun classesDexSha256(context: Context): String? {
 Some instrumentation happens after app start. Run lightweight checks periodically and escalate if anomalies appear.
 
 ```kotlin
-import java.util.concurrent.Executors
-import java.util.concurrent.TimeUnit
 
 object RuntimeWatchdog {
     private val scheduler = Executors.newSingleThreadScheduledExecutor()
@@ -411,7 +403,7 @@ Google’s Play Integrity (formerly SafetyNet) is the recommended way to get a G
 
 ---
 
-## Action plan & checklist (practical roadmap)
+## Action plan & checklist
 
 **Phase 0 — baseline:**
 - Add root detection, Xposed detection, Frida map scan.
@@ -450,14 +442,4 @@ Google’s Play Integrity (formerly SafetyNet) is the recommended way to get a G
 - Keep your detection logic under active maintenance; Android internals change often.
 - Prioritize server-side attestation for high-sensitivity operations — the device can be hacked, your server cannot (assuming proper security).
 
----
-
-## Want this as a polished, ready-to-post Markdown file?
-
-I created this document with full code examples and an implementation roadmap. If you want, I can:
-- Convert the Gradle/CI snippets into real Gradle task code for your pipeline.
-- Produce an NDK example that reads an exported symbol prologue and computes a SHA-256 (per-ABI sample for arm64-v8a + armeabi-v7a).
-- Add small diagrams and a TL;DR 1-page checklist for your portfolio landing page.
-
-Tell me which follow-up you'd like (NDK code, Play Integrity integration examples, or a shorter publish-ready summary).
 
