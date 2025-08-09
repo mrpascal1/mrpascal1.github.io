@@ -23,8 +23,8 @@ Deep dive, practical code, trade-offs, and a real-world implementation plan you 
 7. [Attestation & server-side verification](#attestation--server-side-verification)
 8. [Hardening, deployment, and telemetry](#hardening-deployment-and-telemetry)
 9. [Testing, false positives & UX](#testing-false-positives--ux)
-10. [Limitations & how attackers will try to bypass you](#limitations--how-attackers-will-try-to-bypass-you)
-11. [Action plan & checklist](#action-plan--checklist)
+10.  [Limitations & how attackers will try to bypass you](#limitations--how-attackers-will-try-to-bypass-you)
+11.  [Action plan & checklist](#action-plan--checklist)
 
 ---
 
