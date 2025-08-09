@@ -12,22 +12,6 @@ Deep dive, practical code, trade-offs, and a real-world implementation plan you 
 
 ---
 
-## Table of Contents
-
-1. [Goals & Threat Model](#goals--threat-model)
-2. [How Hooking Works — technical primer](#how-hooking-works-technical-primer)
-3. [Categories of Detection](#categories-of-detection)
-4. [Practical Kotlin implementations — code you can drop in today](#practical-kotlin-implementations)
-5. [Advanced native / ART-level checks (concept + example)](#advanced-native--art-level-checks)
-6. [Runtime integrity checks — building a trustworthy chain](#runtime-integrity-checks)
-7. [Attestation & server-side verification](#attestation--server-side-verification)
-8. [Hardening, deployment, and telemetry](#hardening-deployment-and-telemetry)
-9. [Testing, false positives & UX](#testing-false-positives--ux)
-10.  [Limitations & how attackers will try to bypass you](#limitations--how-attackers-will-try-to-bypass-you)
-11.  [Action plan & checklist](#action-plan--checklist)
-
----
-
 ## Goals & Threat Model
 
 **Goal:** Detect and respond to runtime method hooking and unauthorized runtime code modification (in-process instrumentation) to protect sensitive flows — e.g., crypto, payments, MFA, or banking logic.
