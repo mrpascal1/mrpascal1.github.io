@@ -66,7 +66,7 @@ Latency budget here is around **5ms**.
 
 ---
 
-# 🔧 2. **Tick Normalizer + Broadcaster**
+# 2. **Tick Normalizer + Broadcaster**
 
 Since exchanges send raw binary messages, brokers must:
 
