@@ -7,7 +7,6 @@ tags: Engineering Backend Concurrency Trading
 
 *(Inspired by Zerodha, Upstox, Groww, Robinhood, TD Ameritrade)*
 <!--more--> 
----
 
 # **Introduction**
 
@@ -277,3 +276,15 @@ It requires:
 * Network optimizations at every layer
 
 This is why only a handful of trading apps in India (Zerodha, Upstox, Groww) have mastered this at scale.
+
+## Key Citations
+- [Scaling Node.js to 1 Million Concurrent WebSocket Clients](https://medium.com/@connect.hashblock/scaling-node-js-to-1-million-concurrent-websocket-clients-with-horizontal-sharding-51c20091088e)
+- [How to Scale WebSockets for High-Concurrency Systems](https://ably.com/topic/the-challenge-of-scaling-websockets)
+- [Stock Market App Development: Real-Time WebSocket Dashboards](https://openwebsolutions.in/blog/stock-market-app-development-real-time-websocket-dashboards-2025/)
+- [Designing Scalable Trading Apps with Real-Time Market Data APIs](https://finage.co.uk/blog/designing-scalable-trading-apps-with-realtime-market-data-apis--684b0c01ab6efd9ba320f588)
+- [Challenges of Scaling WebSockets](https://dev.to/ably/challenges-of-scaling-websockets-3493)
+- [Scaling WebSockets to Millions](https://dyte.io/blog/scaling-websockets-to-millions/)
+- [WebSockets at Scale - Production Architecture](https://websocket.org/guides/websockets-at-scale/)
+- [Handling 1M WebSocket Connections in Spring Boot](https://blog.stackademic.com/handling-1-million-websocket-connections-in-spring-boot-without-losing-my-mind-f69ee013cbb9)
+- [Best Way to Handle One Million Concurrent Socket Connections](https://stackoverflow.com/questions/49398241/best-way-to-handle-one-million-concurrent-socket-connections)
+- [How to Handle 1M WebSocket Connections (Nginx/HAProxy)](https://serverfault.com/questions/725224/how-to-handle-1m-websocket-connections-nginx-haproxy-amazon-google)
