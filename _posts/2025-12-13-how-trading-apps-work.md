@@ -2,14 +2,11 @@
 layout: post
 author: Shahid Raza
 title: How Trading Apps Handle 1 Million+ Concurrent WebSocket Connections
-tags: Engineering Android Security
+tags: Engineering Backend Concurrency Trading
 ---
 
-
-# **How Trading Apps Handle 1 Million+ Concurrent WebSocket Connections**
-
 *(Inspired by Zerodha, Upstox, Groww, Robinhood, TD Ameritrade)*
-
+<!--more--> 
 ---
 
 # **Introduction**
