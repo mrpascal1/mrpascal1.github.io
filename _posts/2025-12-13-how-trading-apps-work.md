@@ -42,26 +42,7 @@ This is real **high-throughput + low-latency** engineering.
 
 A trading app’s real-time architecture looks like this:
 
-```
-| Layer            | Tools                                                            |
-| ---------------- | ---------------------------------------------------------------- |
-| Load Balancer    | **NGINX**, **Envoy**, **HAProxy**, **AWS ALB/NLB**               |
-| WebSocket Server | **Go**, **Node.js**, **Elixir/Phoenix**, **Java Netty**, **C++** |
-| Pub/Sub          | **Redis**, **Kafka**, **NATS**, **Pulsar**                       |
-| Routing          | **Consistent Hashing**, **Service Mesh**                         |
-
-Exchange Feeds (NSE/BSE) 
-        ↓
-Market Data Ingestion Engine
-        ↓
-Tick Normalizer + Throttle Engine
-        ↓
-Market Data Streamer Service
-        ↓
-WebSocket Cluster (100s–1000s of nodes)
-        ↓
-Mobile/Web Clients (1M+ connections)
-```
+![Basic-Trading-Architecture](https://raw.githubusercontent.com/mrpascal1/mrpascal1.github.io/master/imgs/122025/basic_arch_trade.png)
 
 Let’s break it down.
 
@@ -299,5 +280,3 @@ It requires:
 * Network optimizations at every layer
 
 This is why only a handful of trading apps in India (Zerodha, Upstox, Groww) have mastered this at scale.
-
----
