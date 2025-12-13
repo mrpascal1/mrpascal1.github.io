@@ -43,6 +43,13 @@ This is real **high-throughput + low-latency** engineering.
 A trading app’s real-time architecture looks like this:
 
 ```
+| Layer            | Tools                                                            |
+| ---------------- | ---------------------------------------------------------------- |
+| Load Balancer    | **NGINX**, **Envoy**, **HAProxy**, **AWS ALB/NLB**               |
+| WebSocket Server | **Go**, **Node.js**, **Elixir/Phoenix**, **Java Netty**, **C++** |
+| Pub/Sub          | **Redis**, **Kafka**, **NATS**, **Pulsar**                       |
+| Routing          | **Consistent Hashing**, **Service Mesh**                         |
+
 Exchange Feeds (NSE/BSE) 
         ↓
 Market Data Ingestion Engine
