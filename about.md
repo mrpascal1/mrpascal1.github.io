@@ -15,4 +15,4 @@ Apart from it, I have a passion for writing compilers and building operating sys
 * * *
 
 ## Contact
-Connect with me on [LinkedIn](https://www.linkedin.com/in/shahidans/) | [Instagram](https://instagram.com/shahidraza._) 
+Connect with me on [LinkedIn](https://www.linkedin.com/in/shahidans/) | [Instagram](https://instagram.com/shahidraza._) | [Github](https://github.com/mrpascal1/)
