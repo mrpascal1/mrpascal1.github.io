@@ -10,9 +10,9 @@ Here, I'll try to write tech blogs about the things which I encounter during sof
 * * *
 
 ## Tech skills
-*   <b>Programming Languages:</b> Kotlin, Java, Python, Node.js, C<br>
+*   <b>Programming Languages:</b> Kotlin, Java, Python, Node.js, Go, C<br>
 *   <b>Tools and Technologies:</b> Android Studio, Visual Studio, IntelliJ IDEA, Git.<br>
-*   <b>Database:</b> MySQL
+*   <b>Database:</b> MySQL, NoSQL
 
 * * *
 
