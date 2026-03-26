@@ -32,8 +32,19 @@ Large Language Models (LLMs) are neural networks trained on massive text corpora
 {:/nomarkdown}
 
 
-The transformer architecture (Vaswani *et al.* 2017) introduced self-attention and parallel processing, becoming the foundation of modern LLMs. Training involves massive datasets (Common Crawl, Wikipedia, Books, etc.), tokenization (Byte-Pair Encoding or WordPiece), and objectives like next-token (autoregressive) or masked-language modeling. Scaling laws show that model performance improves predictably with more parameters, data, and compute following power-laws. After pretraining, models can be fine-tuned on tasks or aligned via instruction-tuning and RLHF (reinforcement learning from human feedback). At inference, LLMs generate text with decoding strategies (greedy, beam-search, top-*k*/top-*p* sampling). LLMs exhibit failure modes (hallucinations, bias) reflecting training data, so safety measures (data filtering, RLHF, rule-based models) are applied. This post details the history, architecture, training, inference, and evaluation of LLMs, with code snippets and diagrams for clarity.
+The [transformer architecture](https://en.wikipedia.org/wiki/Transformer_(deep_learning)) (Vaswani *et al.*, 2017) introduced self-attention and parallel processing, becoming the foundation of modern Large Language Models (LLMs).
 
+These models are trained on massive datasets (such as Common Crawl, Wikipedia, and books) using techniques like tokenization and objectives such as next-token prediction or masked language modeling.
+
+Performance improves predictably with more parameters, data, and compute — a phenomenon known as **scaling laws**.
+
+After pretraining, models are fine-tuned on specific tasks or aligned using instruction-tuning and [RLHF](https://en.wikipedia.org/wiki/Reinforcement_learning_from_human_feedback) (Reinforcement Learning from Human Feedback) to make them more helpful and safer.
+
+At inference time, LLMs generate text using various decoding strategies like greedy, beam search, or top-k/top-p sampling.
+
+However, they can suffer from [hallucinations](https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)) and biases inherited from training data, so safety techniques like data filtering and RLHF are applied.
+
+This post covers the history, architecture, training, inference, and evaluation of LLMs with code examples and diagrams.
 ---
 
 ## 1. Historical context: n-grams, RNNs, attention
@@ -73,7 +84,9 @@ $$
 \text{Attention}(Q, K, V) = \softmax\left( \frac{Q K^T}{\sqrt{d_k}} \right) V
 $$
 
-The scaling by $\sqrt{d_k}$ keeps gradients stable. **Multi-head attention** runs several attention "heads" in parallel — each head uses different learned linear projections $W_i^Q, W_i^K, W_i^V$, computes attention independently, and the head outputs are concatenated and projected by $W^O$:
+The scaling helps keep the training stable.
+
+**Multi-head attention** allows the model to focus on different aspects of the text at the same time. It runs several attention "heads" in parallel. Each head processes the information differently, and their results are later combined for a richer representation.
 
 $$
 \text{MultiHead}(Q,K,V) = \text{Concat}(\text{head}_1, \dots, \text{head}_h)\,W^O
