@@ -3,9 +3,26 @@ layout: post
 author: Shahid Raza
 title: How Large Language Models Work
 tags: Engineering ML AI GPT LLM
+math: true
 ---
 
-Large Language Models (LLMs) are neural networks trained on massive text corpora to model language. Early approaches used n-grams or recurrent nets to predict words sequentially. The transformer architecture (Vaswani *et al.* 2017) introduced self-attention and parallel processing, becoming the foundation of modern LLMs. Training involves massive datasets (Common Crawl, Wikipedia, Books, etc.), tokenization (Byte-Pair Encoding or WordPiece), and objectives like next-token (autoregressive) or masked-language modeling. Scaling laws show that model performance improves predictably with more parameters, data, and compute following power-laws. After pretraining, models can be fine-tuned on tasks or aligned via instruction-tuning and RLHF (reinforcement learning from human feedback). At inference, LLMs generate text with decoding strategies (greedy, beam-search, top-*k*/top-*p* sampling). LLMs exhibit failure modes (hallucinations, bias) reflecting training data, so safety measures (data filtering, RLHF, rule-based models) are applied. This post details the history, architecture, training, inference, and evaluation of LLMs, with code snippets and diagrams for clarity.
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$']],
+      displayMath: [['$$', '$$']],
+      processEscapes: true
+    }
+  };
+</script>
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+Large Language Models (LLMs) are neural networks trained on massive text corpora to model language. Early approaches used n-grams or recurrent nets to predict words sequentially. The transformer architecture (Vaswani *et al.* 2017) introduced self-attention and parallel processing, becoming the foundation of modern LLMs. 
+<!--more--> 
+
+Training involves massive datasets (Common Crawl, Wikipedia, Books, etc.), tokenization (Byte-Pair Encoding or WordPiece), and objectives like next-token (autoregressive) or masked-language modeling. Scaling laws show that model performance improves predictably with more parameters, data, and compute following power-laws. After pretraining, models can be fine-tuned on tasks or aligned via instruction-tuning and RLHF (reinforcement learning from human feedback). At inference, LLMs generate text with decoding strategies (greedy, beam-search, top-*k*/top-*p* sampling). LLMs exhibit failure modes (hallucinations, bias) reflecting training data, so safety measures (data filtering, RLHF, rule-based models) are applied. This post details the history, architecture, training, inference, and evaluation of LLMs, with code snippets and diagrams for clarity.
 
 ---
 
