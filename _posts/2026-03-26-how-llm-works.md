@@ -1,3 +1,10 @@
+---
+layout: post
+author: Shahid Raza
+title: How Large Language Models Work
+tags: Engineering ML AI GPT LLM
+---
+
 # How Large Language Models Work
 
 **Executive summary:** Large Language Models (LLMs) are neural networks trained on massive text corpora to model language. Early approaches used n-grams or recurrent nets to predict words sequentially【18†L159-L167】【42†L7-L10】. The transformer architecture (Vaswani *et al.* 2017) introduced self-attention and parallel processing, becoming the foundation of modern LLMs【9†L226-L233】【14†L281-L289】. Training involves massive datasets (Common Crawl, Wikipedia, Books, etc.), tokenization (Byte-Pair Encoding or WordPiece【35†L90-L93】【36†L90-L93】), and objectives like next-token (autoregressive) or masked-language modeling【66†L277-L280】. Scaling laws show that model performance (cross-entropy loss) improves predictably with more parameters, data, and compute following power-laws【39†L114-L122】. After pretraining, models can be fine-tuned on tasks or aligned via instruction-tuning and RLHF (reinforcement learning from human feedback)【41†L61-L69】【41†L67-L72】. At inference, LLMs generate text with decoding strategies (greedy, beam-search, top-*k*/top-*p* sampling)【22†L124-L132】【24†L187-L195】. Evaluation uses metrics like perplexity【42†L7-L10】 or task-specific scores (accuracy, BLEU, etc.). LLMs exhibit failure modes (hallucinations, bias) reflecting training data【46†L843-L851】【46†L860-L863】, so safety measures (data filtering, RLHF, rule-based models) are applied【41†L67-L72】【49†L9-L18】. This report details the history, architecture, training, inference, and evaluation of LLMs, with code snippets and diagrams for clarity.
