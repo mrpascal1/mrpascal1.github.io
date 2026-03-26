@@ -37,11 +37,23 @@ Training involves massive datasets (Common Crawl, Wikipedia, Books, etc.), token
 
 ## 1. Historical context: n-grams, RNNs, attention
 
-Early language models counted sequences of words (**[n-grams](https://en.wikipedia.org/wiki/N-gram)**) under a **Markov assumption**, e.g. $P(w_n \mid w_{1:n-1}) \approx P(w_n \mid w_{n-1})$ for bigrams. Such models assign probabilities by frequency counts, but suffer from data sparsity and cannot capture long-range context.
+Early language models worked by simply counting how often different groups of words appeared together. These word groups are called **[n-grams](https://en.wikipedia.org/wiki/N-gram)**.
 
-Neural methods replaced this with **[recurrent neural networks (RNNs)](https://en.wikipedia.org/wiki/Recurrent_neural_network)**, where each token is processed sequentially through hidden states. Vanilla RNNs (and [LSTMs](https://en.wikipedia.org/wiki/Long_short-term_memory)/GRUs) learned distributed representations of history and could (in theory) model long context, but in practice are slow to train and suffer from vanishing gradients over long sequences.
+For example, a **bigram** model only looks at pairs of consecutive words. It assumed that the next word mostly depends on just the previous word (this idea is known as the **Markov assumption**). The model then predicted the next word based on how frequently it had appeared after the previous word in its training data.
 
-To improve capacity, [attention mechanisms](https://en.wikipedia.org/wiki/Attention_(machine_learning)) were introduced (e.g. **Bahdanau et al.** 2015) in RNN sequence-to-sequence models, allowing the decoder to *focus on* relevant parts of the input. In **"Attention Is All You Need" (Vaswani et al. 2017)**, the authors abandoned recurrence entirely and built an architecture solely from *self-attention* and feed-forward layers. In a transformer encoder, each token **attends to all others** in the sequence, enabling parallel processing and capturing global context. This innovation underlies modern LLMs. Transformer-like models (GPT, [BERT](https://en.wikipedia.org/wiki/BERT_(language_model)), etc.) quickly surpassed RNNs on benchmarks such as GLUE, translation, and question answering.
+Although simple, these models had serious limitations. They suffered from **data sparsity** — many word combinations never appeared in the training text, making predictions unreliable. They also couldn’t capture **long-range context**, meaning they struggled to understand connections between words that were far apart in a sentence.
+
+Neural methods replaced n-grams with **[recurrent neural networks (RNNs)](https://en.wikipedia.org/wiki/Recurrent_neural_network)**. These models process tokens one by one and keep a hidden state to remember previous information.
+
+Improved versions like [LSTMs](https://en.wikipedia.org/wiki/Long_short-term_memory) and GRUs helped, but RNNs still had two major issues: they were slow to train, and they suffered from the **[vanishing gradient problem](https://en.wikipedia.org/wiki/Vanishing_gradient_problem)** — which made it hard for the model to learn connections between words that are far apart in a sentence.
+
+To improve performance, [attention mechanisms](https://en.wikipedia.org/wiki/Attention_(machine_learning)) were introduced in RNN-based models (Bahdanau et al., 2015). These allowed the model to *focus on* the most relevant parts of the input.
+
+Then in 2017, the paper **"Attention Is All You Need"** (Vaswani et al.) took a bold step: it removed recurrence completely and built the entire architecture using only *self-attention* and feed-forward layers.
+
+In a transformer, every token can attend to all other tokens in the sequence at once. This enables parallel processing and helps the model capture long-range context. This innovation became the foundation of modern LLMs.
+
+Transformer-based models like GPT and [BERT](https://en.wikipedia.org/wiki/BERT_(language_model)) quickly outperformed RNNs on most language tasks.
 
 ---
 
@@ -90,7 +102,13 @@ Block Output
 
 *Transformer encoder block. Tokens are processed by multi-head self-attention (with queries, keys, values), followed by residual add-and-norm, a feed-forward network, and another add-and-norm.*
 
-Each transformer layer has **O(n²d)** compute (with $n$ = sequence length, $d$ = hidden size) due to all-pairs dot products. By contrast, an RNN layer is O(n·d²) sequentially. This parallel structure makes transformers efficient on modern hardware. In practice, stacks of ~12–96 layers are used (e.g. 12 for BERT-base, 96 for GPT-4 style models), with hundreds of millions to trillions of parameters.
+EaEach transformer layer requires a lot of computation, mainly because self-attention compares every token with every other token in the sequence.
+
+By comparison, RNNs process tokens one by one (sequentially), which makes them much slower to train on long texts.
+
+The biggest advantage of transformers is that they can process all tokens **in parallel**. This design makes them highly efficient on modern GPUs and hardware.
+
+In practice, large language models stack many such layers — typically between 12 and 96 layers. For example, BERT-base uses 12 layers, while very large models (like those behind GPT-4) often use around 96 layers. These models can contain anywhere from hundreds of millions to trillions of parameters.
 
 ---
 
