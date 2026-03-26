@@ -48,7 +48,7 @@ A **Transformer block** consists of:
 In self-attention, each input token is projected to query $Q$, key $K$, and value $V$ vectors. The attention output is a weighted sum of values:
 
 $$
-\text{Attention}(Q,K,V) = \text{softmax}\!\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+\text{Attention}(Q, K, V) = \softmax\left( \frac{Q K^T}{\sqrt{d_k}} \right) V
 $$
 
 The scaling by $\sqrt{d_k}$ keeps gradients stable. **Multi-head attention** runs several attention "heads" in parallel — each head uses different learned linear projections $W_i^Q, W_i^K, W_i^V$, computes attention independently, and the head outputs are concatenated and projected by $W^O$:
