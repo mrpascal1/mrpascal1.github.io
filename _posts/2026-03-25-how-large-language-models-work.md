@@ -226,9 +226,9 @@ print(tokenizer.decode(sample_ids[0]))
 
 LLM performance is evaluated both intrinsically and on downstream tasks.
 
-- **Perplexity (PPL):** A standard intrinsic metric, defined as $2^{\text{cross-entropy}}$. Lower perplexity means better predictive performance. It measures how well the model predicts held-out text — the "weighted average branching factor" of the language model.
-- **Downstream benchmarks:** Models are fine-tuned or prompted on tasks (QA, classification, generation) and scored by task-specific metrics. Examples: GLUE/SuperGLUE for language understanding (accuracy/F1), SQuAD for QA (F1/EM), BLEU/ROUGE for translation or summarization, accuracy on common sense tests, etc.
-- **Bias/toxicity metrics:** Specialized tests (e.g. RealToxicityPrompts) measure generation of harmful content. Truthfulness benchmarks (TruthfulQA) evaluate factual accuracy. Hallucination can be measured by comparing generated facts to ground truth (often manually).
+- **[Perplexity (PPL)](https://en.wikipedia.org/wiki/Perplexity):** Perplexity measures how well the language model predicts unseen text. A lower perplexity score means the model is more confident and accurate at guessing the next word. You can think of it as how "surprised" the model gets when reading new sentences — lower is better.
+- **Downstream benchmarks:** These are real-world tests used to evaluate how well the model performs on practical language tasks like question answering, classification, and text generation.
+- **Bias and toxicity metrics:** Special tests are used to measure how often the model generates biased, stereotypical, or harmful content.
 
 Improvement in perplexity generally correlates with downstream gains, but not perfectly — better modeling is a necessary but not sufficient condition for task performance. Thus LLMs are evaluated on many tasks and held-out datasets to ensure general competence.
 
