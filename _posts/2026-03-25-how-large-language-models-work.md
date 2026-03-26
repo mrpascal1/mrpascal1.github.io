@@ -44,7 +44,7 @@ At inference time, LLMs generate text using various decoding strategies like gre
 
 However, they can suffer from [hallucinations](https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)) and biases inherited from training data, so safety techniques like data filtering and RLHF are applied.
 
-This post covers the history, architecture, training, inference, and evaluation of LLMs with code examples and diagrams.
+This blog covers the history, architecture, training, inference, and evaluation of LLMs with code examples and diagrams.
 
 ---
 
