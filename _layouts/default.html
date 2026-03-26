@@ -33,7 +33,7 @@
     {% endif %}
     <!-- Facebook Open Graph -->
     <meta name="og:description" content="{{ desc }}">
-    <meta name="og:title" content="{{ site.title }}">
+    <meta property="og:title" content="{{ page.title | default: site.title }}" />
     <meta name="og:url" content="{{ url }}">
     <meta name="og:type" content="article">
     {% if site.og_image %}
