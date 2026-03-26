@@ -6,18 +6,27 @@ tags: Engineering ML AI GPT LLM
 math: true
 ---
 
+{::nomarkdown}
 <script type="text/javascript">
   window.MathJax = {
     tex: {
-      inlineMath: [['$', '$']],
-      displayMath: [['$$', '$$']],
-      processEscapes: true
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      macros: {
+        softmax: '\\mathrm{softmax}',
+        Concat: '\\mathrm{Concat}'
+      }
+    },
+    svg: {
+      fontCache: 'global'
     }
   };
 </script>
 <script type="text/javascript" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
+{:/nomarkdown}
 
 Large Language Models (LLMs) are neural networks trained on massive text corpora to model language. Early approaches used n-grams or recurrent nets to predict words sequentially. The transformer architecture (Vaswani *et al.* 2017) introduced self-attention and parallel processing, becoming the foundation of modern LLMs. 
 <!--more--> 
