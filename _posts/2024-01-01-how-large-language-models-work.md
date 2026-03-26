@@ -37,11 +37,11 @@ Training involves massive datasets (Common Crawl, Wikipedia, Books, etc.), token
 
 ## 1. Historical context: n-grams, RNNs, attention
 
-Early language models counted sequences of words (**n-grams**) under a **Markov assumption**, e.g. $P(w_n \mid w_{1:n-1}) \approx P(w_n \mid w_{n-1})$ for bigrams. Such models assign probabilities by frequency counts, but suffer from data sparsity and cannot capture long-range context.
+Early language models counted sequences of words (**[n-grams](https://en.wikipedia.org/wiki/N-gram)**) under a **Markov assumption**, e.g. $P(w_n \mid w_{1:n-1}) \approx P(w_n \mid w_{n-1})$ for bigrams. Such models assign probabilities by frequency counts, but suffer from data sparsity and cannot capture long-range context.
 
-Neural methods replaced this with **recurrent neural networks (RNNs)**, where each token is processed sequentially through hidden states. Vanilla RNNs (and LSTMs/GRUs) learned distributed representations of history and could (in theory) model long context, but in practice are slow to train and suffer from vanishing gradients over long sequences.
+Neural methods replaced this with **[recurrent neural networks (RNNs)](https://en.wikipedia.org/wiki/Recurrent_neural_network)**, where each token is processed sequentially through hidden states. Vanilla RNNs (and [LSTMs](https://en.wikipedia.org/wiki/Long_short-term_memory)/GRUs) learned distributed representations of history and could (in theory) model long context, but in practice are slow to train and suffer from vanishing gradients over long sequences.
 
-To improve capacity, attention mechanisms were introduced (e.g. **Bahdanau et al.** 2015) in RNN sequence-to-sequence models, allowing the decoder to *focus on* relevant parts of the input. In **"Attention Is All You Need" (Vaswani et al. 2017)**, the authors abandoned recurrence entirely and built an architecture solely from *self-attention* and feed-forward layers. In a transformer encoder, each token **attends to all others** in the sequence, enabling parallel processing and capturing global context. This innovation underlies modern LLMs. Transformer-like models (GPT, BERT, etc.) quickly surpassed RNNs on benchmarks such as GLUE, translation, and question answering.
+To improve capacity, [attention mechanisms](https://en.wikipedia.org/wiki/Attention_(machine_learning)) were introduced (e.g. **Bahdanau et al.** 2015) in RNN sequence-to-sequence models, allowing the decoder to *focus on* relevant parts of the input. In **"Attention Is All You Need" (Vaswani et al. 2017)**, the authors abandoned recurrence entirely and built an architecture solely from *self-attention* and feed-forward layers. In a transformer encoder, each token **attends to all others** in the sequence, enabling parallel processing and capturing global context. This innovation underlies modern LLMs. Transformer-like models (GPT, [BERT](https://en.wikipedia.org/wiki/BERT_(language_model)), etc.) quickly surpassed RNNs on benchmarks such as GLUE, translation, and question answering.
 
 ---
 
@@ -70,7 +70,7 @@ $$
 \text{head}_i = \text{Attention}(QW_i^Q,\; KW_i^K,\; VW_i^V)
 $$
 
-Multi-head attention allows the model to jointly attend to information from different subspaces and positions. After attention, a **residual connection** and layer normalization produce an intermediate representation, followed by a position-wise feed-forward network (two linear layers with ReLU) and another add-and-norm.
+Multi-head attention allows the model to jointly attend to information from different subspaces and positions. After attention, a **residual connection** and [layer normalization](https://en.wikipedia.org/wiki/Layer_normalization) produce an intermediate representation, followed by a position-wise feed-forward network (two linear layers with ReLU) and another add-and-norm.
 
 To encode token order without recurrence, transformers add **positional encodings** to input embeddings (e.g. sine/cosine functions or learned vectors).
 
