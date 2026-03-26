@@ -308,11 +308,11 @@ Open problems include truly safe alignment, understanding model internals, and r
 
 ## References
 
-- Vaswani *et al.*, "Attention Is All You Need," NeurIPS 2017.
-- Devlin *et al.*, "BERT: Pre-training of Deep Bidirectional Transformers," ACL 2019.
-- Brown *et al.*, "Language Models are Few-Shot Learners" (GPT-3), NeurIPS 2020.
-- Kaplan *et al.*, "Scaling Laws for Neural Language Models," arXiv 2020.
-- Ouyang *et al.*, "Training language models to follow instructions with human feedback" (InstructGPT), NeurIPS 2022.
-- Hugging Face Transformers documentation — Decoding strategies.
-- Jurafsky & Martin, *Speech and Language Processing* (3rd ed.).
-- Mu *et al.*, "Rule Based Rewards for Language Model Safety," OpenAI technical report, 2023.
+- [Attention Is All You Need (Transformer Paper)](https://arxiv.org/abs/1706.03762)
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://aclanthology.org/N19-1423/)
+- [Language Models are Few-Shot Learners (GPT-3 Paper)](https://arxiv.org/abs/2005.14165)
+- [Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361)
+- [Training Language Models to Follow Instructions with Human Feedback (InstructGPT)](https://arxiv.org/abs/2203.02155)
+- [Hugging Face Transformers Documentation — Text Generation & Decoding](https://huggingface.co/docs/transformers/main/en/generation_strategies)
+- [Speech and Language Processing (Jurafsky & Martin Book Draft)](https://web.stanford.edu/~jurafsky/slp3/)
+- [Rule-Based Rewards for Language Model Safety (OpenAI Technical Report)](https://cdn.openai.com/papers/rule-based-rewards-for-language-model-safety.pdf)
