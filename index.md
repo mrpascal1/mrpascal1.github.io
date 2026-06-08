@@ -17,5 +17,5 @@ Here, I'll try to write tech blogs about the things which I encounter during sof
 * * *
 
 ### Recent Blog
-<div class="blog"><h3><u style="color: #FF0F00"><a href="https://www.shahidraza.me/2026/03/25/how-large-language-models-work.html">How Large Language Models Work?</a></u></h3>Large Language Models (LLMs) are neural networks trained on massive text corpora to model language. Early approaches used n-grams or recurrent nets to predict words sequentially.</div>
+<div class="blog"><h3><u style="color: #FF0F00"><a href="https://www.shahidraza.me/2026/06/08/gradle-convention-plugin.html">Stop Repeating Yourself - Master Convention Plugins in Gradle</a></u></h3>Recently I got to know about convention plugins in gradle, it eliminates duplicated build logic across multi-module projects. This guide shows you how to enforce consistency, improve performance, and scale your Gradle builds with an included build setup.</div>
 <div><h4><u style="color: #FF0F00"><a href="https://www.shahidraza.me/blogs">View All →</a></u></h4></div>
