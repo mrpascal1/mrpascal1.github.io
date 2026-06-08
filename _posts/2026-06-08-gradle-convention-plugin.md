@@ -17,7 +17,7 @@ Gradle is the backbone of many modern JVM, Android, and Kotlin projects. As proj
 
 ### What Are Convention Plugins?
 
-A **convention plugin** is typically a *precompiled script plugin* (or a binary plugin) that applies and configures core/community plugins with your team's defaults (e.g., Java/Kotlin version, Android SDK settings, common dependencies). 
+A **convention plugin** is typically a *precompiled script plugin* (or a binary plugin) that applies and configures core/community plugins with your team's defaults (for example -  Java/Kotlin version, Android SDK settings, common dependencies). 
 
 - They centralize logic in one place.
 - They are applied like any other plugin (`id("my.convention.android-library")`).
@@ -28,18 +28,18 @@ Gradle docs emphasize them as the preferred way to share build logic.
 ### Why Use Them?
 
 - **DRY (Don't Repeat Yourself)**: Eliminate copy-paste across dozens of modules.
-- **Consistency**: Enforce standards (e.g., same `minSdk`, compiler flags, test runners).
+- **Consistency**: Enforce standards (for example -  same `minSdk`, compiler flags, test runners).
 - **Maintainability**: Update once, affects everywhere.
 - **Performance**: Better than root-project references or script plugins; supports modern Gradle features.
 - **Scalability**: Ideal for large monorepos or Android apps with many feature modules.
 - **Extensibility**: Add custom extensions for module-specific tweaks.
 
-Common pain points they solve: version management (pair with Version Catalogs), boilerplate Android configs, and third-party plugin setup (e.g., Kotlin, Compose, KSP, Detekt).
+Common pain points they solve: version management (pair with Version Catalogs), boilerplate Android configs, and third-party plugin setup (for example -  Kotlin, Compose, KSP, Detekt).
 
 ### Two Main Ways to Set Them Up
 
 1. **`buildSrc`** (simplest, great for small/medium projects): Automatically available. Limited to one build.
-2. **Included build** (recommended for larger setups, e.g., `build-logic/`): More scalable, composite build.
+2. **Included build** (recommended for larger setups, for example -  `build-logic/`): More scalable, composite build.
 
 We'll focus on the included build approach, as it's the current best practice.
 
@@ -181,7 +181,7 @@ That's it—modules become tiny and consistent.
 
 ### Advanced Tips
 
-- **Extensions for Configurability**: Expose an extension (e.g., `myconvention { enableCompose() }`) so modules can opt into extras.
+- **Extensions for Configurability**: Expose an extension (for example -  `myconvention { enableCompose() }`) so modules can opt into extras.
 - **Precompiled Script Plugins**: Simpler alternative—place `.gradle.kts` files in `build-logic/convention/src/main/kotlin/` (filename becomes plugin ID).
 - **Dependencies**: Use `compileOnly` for plugins you apply inside; `implementation` for helpers.
 - **Version Catalogs**: Share versions everywhere.
@@ -207,7 +207,7 @@ That's it—modules become tiny and consistent.
 
 Convention plugins transform chaotic build scripts into clean, declarative, and maintainable code. They align with Gradle's vision for scalable builds and pay dividends as your project grows.
 
-Start small: Extract one common configuration (e.g., Android library basics) into a plugin, then expand. Your future self (and teammates) will thank you.
+Start small: Extract one common configuration (for example -  Android library basics) into a plugin, then expand. Your future self (and teammates) will thank you.
 
 **Further Reading**:
 - Official Gradle Docs on Convention Plugins
