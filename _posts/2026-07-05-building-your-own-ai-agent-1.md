@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Shahid Raza
-title: Building Your Own AI Agents - Part 1: Getting Started with Autonomous Intelligence
+title: Building Your Own AI Agents - Part 1
 tags: AI-Agents LLM Python ReAct Autonomous-AI Open-Source-AI
 math: false
 ---
