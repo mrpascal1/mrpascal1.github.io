@@ -71,7 +71,7 @@ import requests
 import json
 from openai import OpenAI
 
-client = OpenAI(api_key="your-api-key")  # Or use Groq, etc.
+client = OpenAI(api_key="your-api-key")
 
 def web_search(query: str, num_results: int = 5):
     """Simple search simulation or integrate Serper, Tavily, or DuckDuckGo"""
@@ -99,7 +99,7 @@ def run_agent(query: str, max_steps=5):
     
     for step in range(max_steps):
         response = client.chat.completions.create(
-            model="gpt-4o-mini",  # or grok-beta, claude-3-haiku, etc.
+            model="gpt-4o-mini",  # or claude-3-haiku, etc.
             messages=messages,
             tools=[{
                 "type": "function",
