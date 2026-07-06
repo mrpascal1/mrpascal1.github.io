@@ -17,5 +17,5 @@ Here, I'll try to write tech blogs about the things which I encounter during sof
 * * *
 
 ### Recent Blog
-<div class="blog"><h3><u style="color: #FF0F00"><a href="https://www.shahidraza.me/2026/07/05/building-your-own-ai-agent-1.html">Building Your Own AI Agents - Part 1: Getting Started with Autonomous Intelligence</a></u></h3>AI agents represent one of the most exciting shifts in how we interact with artificial intelligence.</div>
+<div class="blog"><h3><u style="color: #FF0F00"><a href="https://www.shahidraza.me/2026/07/06/building-harness-in-cc.html">Building Your Own Harness in Claude Code</a></u></h3>Claude Code from Anthropic is a powerful agentic coding tool that runs in your terminal, IDE, or other environments. It lets Claude explore codebases, edit files, run commands, and handle complex tasks autonomously.</div>
 <div><h4><u style="color: #FF0F00"><a href="https://www.shahidraza.me/blogs">View All →</a></u></h4></div>
